@@ -7,8 +7,11 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<script src="./js/bootstrap.js"></script>
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 <body>
 	<header>
@@ -19,27 +22,54 @@
 					<li class="nav-item"><a class="nav-link" href="#">About me</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 				</ul>
-				<form class="form-inline float-xs-right">
-					<input class="form-control" type="text" placeholder="Search">
-					<button class="btn btn-primary" type="submit">Search</button>
-				</form>
+				<div class="visible-md">
+					<form class="form-inline float-xs-right">
+						<input class="form-control" type="text" placeholder="Search">
+						<button class="btn btn-primary" type="submit">Search</button>
+					</form>
+				</div>
 			</div>
 		</nav>
 	</header>
 	<section>
-		<article>
-			<div class="container">
-				<div class="jumbotron">
-					<h1 class="display-3">Hello, world!</h1>
-					<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-					<hr class="my-2">
-					<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-					</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="card">
+						<div class="card-block text-xs-center">
+							<img src="http://yusel.net/img/profile_picture.jpg" alt="Image" class="rounded-circle" />
+							<h4 class="card-title h5">Yuserys</h4>
+							<p class="card-text small">Studying Mathematics and Logic at Westfälische Wilhelms-Universität Münster, Germany.</p>
+						</div>
+						<div class="card-block small">
+							<div class="row">
+								<div class="col-xs-1"><i class="fa fa-fw fa-calendar-o"></i></div>
+								<div class="col-xs-10">20 years old</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1"><i class="fa fa-fw fa-home"></i></div>
+								<div class="col-xs-10">Lives in <a href="#">Münster, Germany</a></div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1"><i class="fa fa-fw fa-map-marker"></i></div>
+								<div class="col-xs-10">From <a href="#">Dortmund, Germany</a></div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1"><i class="fa fa-fw fa-university"></i></div>
+								<div class="col-xs-10">Studies Mathematics at <a href="#">WWU Münster</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec porta quam, ut maximus erat. Maecenas turpis mi, scelerisque ac sapien in, accumsan fermentum sem. Donec gravida dolor vel enim consequat, eu rutrum nunc lacinia. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus et libero dapibus, ornare massa ut, aliquam est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus varius dictum ex, vel porta ante iaculis at. Quisque nisl urna, pharetra vitae bibendum et, mollis ut risus. Integer non nibh condimentum nisl aliquam eleifend in a ex. Nulla et maximus elit, quis mollis quam. Cras congue eget velit eget feugiat. Aenean congue convallis aliquet.</p> 
+					<p class="text-justify">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris iaculis tristique pharetra. Pellentesque metus risus, cursus eget dui at, cursus auctor dolor. Sed sodales molestie malesuada. Nunc sed interdum nisl. Donec porta justo sit amet lacus fermentum ultrices. Fusce ut libero in sapien ullamcorper tincidunt non quis lacus. Donec nec tincidunt sapien. In hac habitasse platea dictumst. Nunc vel felis ut nisi blandit molestie a nec dui. Duis at convallis nisi. Morbi eget lacus ac erat hendrerit dictum nec at diam. Nam pulvinar, arcu eu pulvinar dictum, libero diam aliquet tortor, vel venenatis odio dui eget nibh. Phasellus facilisis nisi sed pellentesque efficitur. Etiam viverra est aliquet nunc pharetra tempor. </p>
+					<p class="text-justify">Nam congue lectus et diam hendrerit, nec varius dolor scelerisque. Aenean id sagittis libero. Aliquam vitae neque vitae enim auctor rhoncus eget nec mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer tincidunt augue feugiat leo sagittis, vitae tincidunt mauris iaculis. Etiam vel tristique est, vitae varius lectus. Praesent vitae fermentum tortor, quis dictum leo. Suspendisse suscipit dignissim finibus. Aliquam non eros et libero iaculis sodales. </p>
+					<p class="text-justify">Duis venenatis ultricies sem at ornare. Ut tincidunt feugiat ipsum. Suspendisse varius ex sit amet est placerat dictum. Nulla eget nulla sed enim fringilla commodo. Nulla suscipit a ipsum vitae consectetur. Quisque a facilisis mauris. Maecenas mi nisi, consectetur in tortor in, tempus venenatis enim. Sed cursus faucibus posuere. Sed libero nisl, pretium id est vitae, feugiat euismod metus. Nulla porta in felis non maximus. </p>
+					<p class="text-justify">Praesent eu augue vitae eros lobortis fringilla sed condimentum lacus. Donec felis felis, congue eget justo in, semper aliquet dolor. Pellentesque sodales velit in interdum hendrerit. Maecenas ornare dictum turpis, nec egestas lorem. Integer eleifend massa ac lectus viverra condimentum. Integer euismod massa dolor, vehicula volutpat lorem ornare a. Maecenas luctus nec urna ac porta. Nunc sed lobortis tortor, et suscipit urna. Nunc vulputate congue magna in pellentesque. Sed posuere velit sed rhoncus venenatis. </p>
 				</div>
 			</div>
-		</article>
+		</div>
 	</section>
 </body>
 </html>
