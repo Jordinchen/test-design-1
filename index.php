@@ -19,5 +19,8 @@
 				</ul>
 			</div>
 		</nav>
+		<article>
+			<p>Lorem ipsum dolor sit amet. <?php print("Hello."); ?></p>
+		</article>
 	</body>
 </html>
