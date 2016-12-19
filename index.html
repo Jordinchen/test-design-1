@@ -54,34 +54,54 @@
 			line-height: 60px;
 		}
 
+		.footer a {
+			color: rgba(255, 255, 255, .5);
+		}
+
+		.footer a:hover,
+		.footer a:focus {
+			color: rgba(255, 255, 255, .75);
+			text-decoration: none;
+		}
+
 		.breadcrumb {
 			border-radius: 0;
 			background: none;
-			color: rgba(255,255,255,.5);
+			color: rgba(255, 255, 255, .75) !important;
 		}
-		
+
+		.breadcrumb .breadcrumb-item::before {
+			color: rgba(255, 255, 255, .75) !important;
+		}
+		.breadcrumb>li+li:before {color: rgba(255, 255, 255, 1); content: "\002F\00a0";}
+
 		.breadcrumb a {
-			color: rgba(255,255,255,.5);
+			color: rgba(255, 255, 255, .5);
 		}
 
 		.breadcrumb a:hover,
 		.breadcrumb a:focus {
-			color: rgba(255,255,255,.75);
+			color: rgba(255, 255, 255, .75);
 			text-decoration: none;
 		}
 
-		.active .breadcrumb{
-			color: rgba(255,255,255,1);
+		.breadcrumb > .active {
+			color: rgba(255, 255, 255, 1);
 		}
 	</style>
 
 	<!-- JavaScript -->
 	<script type="text/javascript">
-		$('.dropdown-toggle').dropdown();
+		$(document).on('click', 'a', function(event){
+			event.preventDefault();
+			$('html, body').animate({
+		    	scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 500);
+		});
 	</script>
 </head>
 <body class="bg-faded">
-<header>
+<header id="top">
 	<nav class="navbar navbar-dark bg-material" style="margin-bottom: 50px;">
 		<div class="container">
 			<div class="navbar-header">
@@ -206,7 +226,7 @@
 	<div class="footer-copyright">
 		<div class="container">
 			&copy; 2016 Kevin Sporbeck
-			<a class="float-xs-right nav-item nav-link" href="#">Contact</a>
+			<a class="float-xs-right nav-item nav-link" href="#top">Scroll Up &uarr;</a>
 		</div>
 	</div>
 </footer>
